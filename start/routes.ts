@@ -26,8 +26,4 @@ Route.get('/', async () => {
 
 Route.post('/users', 'UsersController.store')
 
-// Route.post('/users', async ({ request, response }) => {
-//   const userPayload = request.only(['email', 'username', 'avatar', 'password'])
-//   const user = await User.create(userPayload)
-//   return response.created({ user })
-// })
+Route.put('/users/:id', 'UsersController.update')
